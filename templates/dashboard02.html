@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes page responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard 2</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Your CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+
+        body{
+            padding-top:80px;
+        }
+
+        .dashboard-box{
+            width:100%;
+            max-width:1400px;
+            margin:auto;
+            overflow:hidden;
+        }
+
+        .tableauPlaceholder{
+            width:100% !important;
+        }
+
+        .btn-pink{
+            background:#ff69b4;
+            color:white;
+            border:none;
+        }
+
+        .btn-pink:hover{
+            background:#ff4da6;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+
+<div class="container-fluid px-4">
+
+    <a class="navbar-brand fw-bold" href="/">
+        ♡ ♡Cosmetic Insight♡ ♡
+    </a>
+
+    <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu">
+
+        <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMenu">
+
+        <ul class="navbar-nav mx-auto">
+
+            <li class="nav-item mx-2">
+                <a class="nav-link active" href="/">Home</a>
+            </li>
+
+            <li class="nav-item mx-2">
+                <a class="nav-link" href="/about">About</a>
+            </li>
+
+            <li class="nav-item dropdown mx-2">
+
+                <a class="nav-link dropdown-toggle"
+                   href="#"
+                   data-bs-toggle="dropdown">
+
+                    Dashboards
+
+                </a>
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a class="dropdown-item" href="/dashboard1">
+                            Dashboard 1
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item" href="/dashboard2">
+                            Dashboard 2
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+            <li class="nav-item mx-2">
+                <a class="nav-link" href="/story">Story</a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+</nav>
+
+
+<!-- PAGE CONTENT -->
+<div class="container mt-5">
+
+<h1 class="text-center">  ♡ ♡Cosmetic Insight♡ ♡</h1>
+
+<div class="dashboard-box mt-5">
+
+<!-- TABLEAU DASHBOARD -->
+
+<div class='tableauPlaceholder'
+     id='viz1781346549966'
+     style='position: relative'>
+
+<noscript>
+
+<a href='#'>
+<img alt='Cosmetics Insight Dashboard'
+src='https://public.tableau.com/static/images/CO/COSMETICINSIGHTSNAVIGATINGCOSMETICSTRENDSANDCONSUMERINSIGHTSWITHTABLEAU-DASHBOARD-02/Dashboard2/1_rss.png'
+style='border:none;width:100%;' />
+</a>
+
+</noscript>
+
+<object class='tableauViz' style='display:none;'>
+
+<param name='host_url'
+value='https%3A%2F%2Fpublic.tableau.com%2F' />
+
+<param name='embed_code_version' value='3' />
+
+<param name='site_root' value='' />
+
+<param name='name'
+value='COSMETICINSIGHTSNAVIGATINGCOSMETICSTRENDSANDCONSUMERINSIGHTSWITHTABLEAU-DASHBOARD-02/Dashboard2' />
+
+<param name='tabs' value='no' />
+
+<param name='toolbar' value='yes' />
+
+</object>
+
+</div>
+
+</div>
+
+<a href="/" class="btn btn-pink mt-4 mb-5">Home</a>
+
+</div>
+
+
+<!-- TABLEAU RESPONSIVE SCRIPT -->
+<script>
+
+var divElement = document.getElementById('viz1781346549966');
+var vizElement = divElement.getElementsByTagName('object')[0];
+
+/* RESPONSIVE WIDTH */
+
+vizElement.style.width = "100%";
+
+/* RESPONSIVE HEIGHT */
+
+if(window.innerWidth > 1200){
+    vizElement.style.height = "850px";      // Desktop
+}
+else if(window.innerWidth > 768){
+    vizElement.style.height = "650px";      // Laptop
+}
+else{
+    vizElement.style.height = "500px";      // Mobile
+}
+
+/* LOAD TABLEAU */
+
+var scriptElement = document.createElement('script');
+scriptElement.src =
+'https://public.tableau.com/javascripts/api/viz_v1.js';
+
+vizElement.parentNode.insertBefore(scriptElement, vizElement);
+
+</script>
+
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

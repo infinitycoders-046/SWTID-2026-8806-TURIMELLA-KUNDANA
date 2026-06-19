@@ -1,0 +1,397 @@
+/* =========================
+   GOOGLE FONTS
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600;700&family=Sacramento&display=swap');
+
+/* =========================
+   GLOBAL RESET
+========================= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   COLOR THEME
+========================= */
+:root{
+    --hot-pink: #ff5fa2;
+    --baby-pink: #ffd6e8;
+    --soft-pink: #fff0f7;
+    --light-pink: #ffeaf4;
+    --lavender: #f7efff;
+    --rose: #f8b8c9;
+    --text: #7b4a5d;
+}
+
+/* =========================
+   BODY WITH CUTE PATTERN
+========================= */
+body{
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+
+    /* Beautiful Soft Radial-to-Linear Gradient Wrapper */
+    background:
+      radial-gradient(circle at 20% 30%, rgba(255, 219, 233, 0.6) 0%, transparent 30%),
+      radial-gradient(circle at 80% 20%, rgba(243, 229, 255, 0.6) 0%, transparent 30%),
+      radial-gradient(circle at 50% 80%, rgba(255, 233, 220, 0.5) 0%, transparent 35%),
+      linear-gradient(135deg, #fff9fc 0%, #fff3f8 100%);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.custom-navbar{
+    background: linear-gradient(90deg, #ff6fae, #ff9cc2, #ffd6e8);
+    padding: 15px 0;
+    box-shadow: 0 4px 20px rgba(255,105,180,.30);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* logo */
+.navbar-brand{
+    font-family: 'Fredoka', sans-serif;
+    color: white !important;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* links */
+.nav-link{
+    font-family: 'Fredoka', sans-serif;
+    color: white !important;
+    font-weight: 500;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+/* hover */
+.nav-link:hover{
+    color: #fffafc !important;
+    transform: translateY(-2px);
+}
+
+/* dropdown */
+.dropdown-menu{
+    background: #fff5fa;
+    border: none;
+    border-radius: 15px;
+}
+
+.dropdown-item:hover{
+    background: #ffd6e8;
+}
+
+/* search */
+.search-box{
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+
+.search-btn{
+    border: none;
+    background: white;
+    border-radius: 50%;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    /* Transparent background to let the body's new magical gradient shine through */
+    background: transparent;
+}
+
+/* heading - Now using the cute Fredoka font! */
+.hero h1{
+    font-family: 'Fredoka', sans-serif;
+    font-size: 72px;
+    color: #cc4b87;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* subtitle */
+.hero p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    color: #6b5560;
+    font-weight: 400;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn-primary,
+.btn-pink{
+    font-family: 'Fredoka', sans-serif;
+    background: #ff6fae !important;
+    border: none !important;
+    border-radius: 30px;
+    padding: 12px 28px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-primary:hover,
+.btn-pink:hover{
+    background: #ff4f99 !important;
+    transform: scale(1.05);
+}
+
+/* =========================
+   TEAM SECTION & GRID
+========================= */
+.team-section{
+    min-height: 100vh;
+    padding: 80px 8%;
+    position: relative;
+    z-index: 1;
+}
+
+.overview{
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 70px;
+}
+
+.mini-title{
+    font-family: 'Fredoka', sans-serif;
+    color: #d08aa5;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.overview h1{
+    font-size: 70px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #34262b;
+    margin-bottom: 20px;
+}
+
+/* Cursive accent styling */
+.overview span{
+    font-family: 'Sacramento', cursive;
+    color: #ff7cab;
+    font-size: 80px;
+    font-weight: 400;
+    display: inline-block;
+    line-height: 0.5;
+    vertical-align: middle;
+}
+
+.description{
+    font-family: 'Poppins', sans-serif;
+    color: #6d5b63;
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: auto;
+}
+
+.team-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* =========================
+   CARDS & BOXES
+========================= */
+.card{
+    background: rgba(255, 255, 255, .55);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, .6);
+    border-radius: 35px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(255, 170, 200, .15);
+    transition: .4s;
+    position: relative;
+}
+
+.card:hover{
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* Heart Decoration on Card */
+.card::before{
+    content: "♡";
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    color: #ff94b8;
+    font-size: 22px;
+}
+
+.image-box{
+    width: 130px;
+    height: 130px;
+    margin: auto;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(45deg, #ffd4e4, #ffe8f2);
+    margin-bottom: 20px;
+}
+
+.image-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card h3{
+    font-size: 24px;
+    color: #d85b8a;
+    margin-bottom: 8px;
+    font-family: 'Playfair Display', serif;
+}
+
+.card p{
+    font-family: 'Fredoka', sans-serif;
+    background: #ffe3ee;
+    padding: 8px;
+    border-radius: 20px;
+    color: #ff6b9a;
+    font-size: 14px;
+    margin-bottom: 18px;
+    font-weight: 500;
+}
+
+.socials{
+    color: #ff94b8;
+    letter-spacing: 8px;
+    font-size: 22px;
+}
+
+.dashboard-box{
+    font-family: 'Poppins', sans-serif;
+    background: #fffafc;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgba(255, 182, 193, .35);
+}
+
+/* =========================
+   CUTE FLOATING BACKGROUND DECORATIONS
+========================= */
+.decoration, .floating {
+    position: fixed;
+    z-index: 0;
+    font-size: 32px;
+    opacity: 0.45;
+    pointer-events: none;
+    animation: floatAnimation 6s ease-in-out infinite;
+}
+
+/* Background elements positioning */
+.bow1       { top: 140px; left: 5%; animation-delay: 0s; }
+.lipstick1  { top: 280px; right: 6%; animation-delay: 1s; font-size: 38px; }
+.heart1     { top: 400px; left: 12%; animation-delay: 1.5s; }
+.sparkle1   { top: 200px; right: 25%; animation-delay: 0.5s; }
+.bow2       { bottom: 220px; right: 8%; animation-delay: 2s; }
+.lipstick2  { bottom: 120px; left: 7%; animation-delay: 3s; font-size: 38px; }
+.heart2     { bottom: 250px; right: 20%; animation-delay: 2.5s; }
+.sparkle2   { bottom: 160px; left: 28%; animation-delay: 1.2s; }
+
+/* FLOAT ANIMATION */
+@keyframes floatAnimation{
+    0%{
+        transform: translateY(0px) rotate(0deg);
+    }
+    50%{
+        transform: translateY(-15px) rotate(6deg);
+    }
+    100%{
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer{
+    font-family: 'Fredoka', sans-serif;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #ff85b3, #ffc1d9);
+    color: white;
+    position: relative;
+    z-index: 1;
+    font-weight: 500;
+}
+
+/* =========================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+========================= */
+@media(max-width: 1000px){
+    .team-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .overview h1{
+        font-size: 50px;
+    }
+    .hero h1{
+        font-size: 48px;
+    }
+    .hero p{
+        font-size: 20px;
+    }
+    .decoration, .floating {
+        font-size: 24px;
+    }
+}
+
+@media(max-width: 700px){
+    .team-container{
+        grid-template-columns: 1fr;
+    }
+    .overview h1{
+        font-size: 38px;
+    }
+    .overview span{
+        font-size: 55px;
+    }
+    .hero h1{
+        font-size: 36px;
+    }
+    .hero p{
+        font-size: 16px;
+    }
+    /* Hide some floating items on mobile to keep it clean and un-cluttered */
+    .sparkle1, .sparkle2, .heart2 {
+        display: none;
+    }
+}
+.team-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 192, 203, 0.5); /* soft pink border */
+    box-shadow: 0 8px 32px 0 rgba(255, 182, 193, 0.2);
+}

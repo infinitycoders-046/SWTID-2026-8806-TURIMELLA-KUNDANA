@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmetic Insight - Story</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons (Optional, but included since you are using them) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Your Custom CSS File -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+        /* Fixes the fixed-navbar overlap issue seen in image_84b879.jpg */
+        body {
+            padding-top: 90px;
+        }
+        /* Ensures the Tableau visualization adapts gracefully to container widths */
+        .tableau-container {
+            width: 100%;
+            overflow-x: auto;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+    <div class="container-fluid px-4">
+        <!-- Brand -->
+        <a class="navbar-brand fw-bold" href="/">
+            ♡ ♡ Cosmetic Insight ♡ ♡
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Content -->
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <!-- Left Menu -->
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item mx-2">
+                    <a class="nav-link active" href="/">
+                        <i class="bi bi-house-heart"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="/about">
+                        <i class="bi bi-heart"></i> About
+                    </a>
+                </li>
+
+                <!-- Dropdown -->
+                <li class="nav-item dropdown mx-2">
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       data-bs-toggle="dropdown">
+                        <i class="bi bi-bar-chart-line"></i> Dashboards
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow rounded-4">
+                        <li><a class="dropdown-item" href="/dashboard1">🌸 Dashboard 1</a></li>
+                        <li><a class="dropdown-item" href="/dashboard2">🌸 Dashboard 2</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="/story">
+                        <i class="bi bi-book-half"></i> Story
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Search -->
+            <form class="d-flex align-items-center">
+                <input class="form-control search-box me-2"
+                       type="search"
+                       placeholder="Search beauty trends">
+                <button class="btn search-btn" type="submit">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content Container -->
+<div class="container my-5">
+
+    <h1 class="text-center mb-4">Project Story 🌷</h1>
+
+    <div class="card p-4 p-md-5 shadow mb-5">
+        <p>
+            The cosmetic industry changes rapidly with trends influenced by
+            social media, customer reviews, product innovation, and beauty culture.
+        </p>
+        <p>
+            Using Tableau dashboards, this project helps visualize customer behavior,
+            top-selling products, cosmetic categories, and emerging beauty trends.
+        </p>
+        <p class="mb-0">
+            Our goal is transforming beauty industry data into actionable insight.
+        </p>
+    </div>
+
+    <!-- Tableau Embed Wrapper -->
+    <div class="tableau-container shadow rounded-4 p-2 bg-white">
+        <div class='tableauPlaceholder' id='viz1781543322943' style='position: relative'>
+            <noscript>
+                <a href='#'><img alt='Cosmetic Story ' src='https://public.tableau.com/static/images/CO/COSMETICINSIGHTSNAVIGATINGCOSMETICSTRENDSANDCONSUMERINSIGHTSWITHTABLEAU-DASHBOARD-02_17815433025600/Story1/1_rss.png' style='border: none' /></a>
+            </noscript>
+            <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='site_root' value='' />
+                <param name='name' value='COSMETICINSIGHTSNAVIGATINGCOSMETICSTRENDSANDCONSUMERINSIGHTSWITHTABLEAU-DASHBOARD-02_17815433025600/Story1' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https://public.tableau.com/static/images/CO/COSMETICINSIGHTSNAVIGATINGCOSMETICSTRENDSANDCONSUMERINSIGHTSWITHTABLEAU-DASHBOARD-02_17815433025600/Story1/1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en-US' />
+                <param name='filter' value='publish=yes' />
+            </object>
+        </div>
+    </div>
+
+    <script type='text/javascript'>
+        var divElement = document.getElementById('viz1781543322943');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width='1000px';
+        vizElement.style.height='991px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+
+    <div class="text-center mt-4">
+        <a href="/" class="btn btn-pink px-4 py-2">Back Home</a>
+    </div>
+
+</div>
+
+<!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+</html>

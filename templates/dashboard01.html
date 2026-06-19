@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Dashboard 1</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+
+        body{
+            padding-top:80px;
+            background:#fdfdfd;
+        }
+
+        /* Tableau container */
+        .dashboard-box{
+            width:100%;
+            max-width:1400px;
+            margin:auto;
+            overflow:hidden;
+        }
+
+        .tableauPlaceholder{
+            width:100% !important;
+        }
+
+        .btn-pink{
+            background:#ff69b4;
+            color:white;
+            border:none;
+        }
+
+        .btn-pink:hover{
+            background:#ff4da6;
+        }
+
+        /* Mobile responsiveness */
+        @media(max-width:768px){
+
+            h1{
+                font-size:26px;
+            }
+
+            .navbar-brand{
+                font-size:18px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top custom-navbar bg-light shadow-sm">
+
+    <div class="container-fluid px-4">
+
+        <a class="navbar-brand fw-bold" href="/">
+             ♡ Cosmetic Insight
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+
+            <!-- Left Menu -->
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item mx-2">
+                    <a class="nav-link active" href="/">
+                        <i class="bi bi-house-heart"></i> Home
+                    </a>
+                </li>
+
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="/about">
+                        <i class="bi bi-heart"></i> About
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown mx-2">
+
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       data-bs-toggle="dropdown">
+
+                        <i class="bi bi-bar-chart-line"></i>
+                        Dashboards
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a class="dropdown-item" href="/dashboard1">
+                                🌸 Dashboard 1
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="/dashboard2">
+                                🌸 Dashboard 2
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="/story">
+                        <i class="bi bi-book-half"></i> Story
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- Search -->
+            <form class="d-flex">
+                <input class="form-control me-2"
+                       type="search"
+                       placeholder="Search beauty trends">
+
+                <button class="btn btn-outline-dark">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- Main Content -->
+<div class="container text-center mt-4">
+
+    <h1>♡ ♡ Cosmetic Market Trends ♡ ♡ </h1>
+
+    <div class="dashboard-box mt-5">
+
+        <div class='tableauPlaceholder'
+             id='viz1781346159727'
+             style='position: relative'>
+
+            <noscript>
+                <a href="#">
+                    <img alt='Dashboard'
+                    </script>
+
+                         style='border:none; width:100%;'>
+                </a>
+            </noscript>
+
+            <object class='tableauViz' style='display:none;'>
+
+                <param name='host_url'
+                       value='https%3A%2F%2Fpublic.tableau.com%2F' />
+
+                <param name='name'
+                       value='COSMETICINSIGHTSNAVIGATINGCOSMETICSTRENDSANDCONSUMERINSIGHTSWITHTABLEAU-dashboard01/Dashboard1' />
+
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+
+            </object>
+
+        </div>
+
+    </div>
+
+    <a href="/" class="btn btn-pink mt-4 mb-5">Home</a>
+
+</div>
+
+
+<!-- Tableau Responsive Script -->
+<script>
+
+var divElement = document.getElementById('viz1781346159727');
+var vizElement = divElement.getElementsByTagName('object')[0];
+
+vizElement.style.width = "100%";
+vizElement.style.height = "800px";
+
+if(window.innerWidth < 768){
+    vizElement.style.height = "500px";
+}
+
+if(window.innerWidth < 480){
+    vizElement.style.height = "400px";
+}
+
+var scriptElement = document.createElement('script');
+scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+
+vizElement.parentNode.insertBefore(scriptElement, vizElement);
+
+</script>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
